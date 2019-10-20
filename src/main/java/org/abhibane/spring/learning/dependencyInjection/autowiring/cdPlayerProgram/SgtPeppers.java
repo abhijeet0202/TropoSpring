@@ -1,13 +1,9 @@
-package DependencyInjection;
+package org.abhibane.spring.learning.dependencyInjection.autowiring.cdPlayerProgram;
 
 import org.springframework.stereotype.Component;
 
-interface CompactDisc{
-	void play();
-}
-
 @Component
-public class SgtPeppers implements CompactDisc{
+public class SgtPeppers implements CompactDisk{
 
 	@Override
 	public void play() {

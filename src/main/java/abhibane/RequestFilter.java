@@ -19,17 +19,14 @@ public class RequestFilter implements Filter {
     }
     
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-    
-        printHeaders((HttpServletRequest) request);
-        
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {    
+        printHeaders((HttpServletRequest) request);        
         chain.doFilter(request, response);
         
     }
     
     @Override
-    public void destroy() {
-    
+    public void destroy() {    
     }
     
     private void printHeaders(HttpServletRequest request) {

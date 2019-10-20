@@ -1,7 +1,7 @@
 package abhibane;
 
 import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.boot.context.embedded.FilterRegistrationBean;
+import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class FilterConfig {
     
     @Bean
-    public FilterRegistrationBean conversationLoggingFilterRegistration() {
+    public org.springframework.boot.web.servlet.FilterRegistrationBean conversationLoggingFilterRegistration() {
     
         final FilterRegistrationBean registration = new FilterRegistrationBean();
         registration.setFilter(new RequestFilter());
